@@ -79,7 +79,10 @@ export default function PopularDishes() {
                             </Card>
                         </CssVarsProvider>
                     );
-                })}
+                })
+            } : (
+              <Box className="no-data">Products are not available!</Box>
+            )
                 </Stack>
                 </Stack>
         </Container>
