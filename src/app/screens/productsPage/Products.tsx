@@ -5,7 +5,9 @@ import {
     Card,
     CardMedia,
     Container,
+    InputAdornment,
     Stack,
+    TextField,
   } from "@mui/material";
   import Pagination from "@mui/material/Pagination";
   import PaginationItem from "@mui/material/PaginationItem";
@@ -35,9 +37,39 @@ import {
             <Stack className={"avatar-big-box"}>
               <Box></Box>
               <Box className={"category-title"}>Burak Restaurant</Box>
-              {/* <Box className={"single-search-big-box"}>
-                <SearchBar />
-              </Box> */}
+              <div className="avatar-search-box">
+              <TextField
+                variant="outlined"
+                placeholder="Type here"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "transparent",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "transparent",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "transparent",
+                    },
+                  },
+                }}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        endIcon={<SearchIcon />}
+                      >
+                        Search
+                      </Button>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </div>
             </Stack>
             <Stack className={"dishes-filter-box"}>
               <Button variant={"contained"} color={"primary"} className={"order"}>
