@@ -47,7 +47,7 @@ import {
                       borderColor: "transparent",
                     },
                     "&:hover fieldset": {
-                      borderColor: "transparent",
+                      borderColor: "black",
                     },
                     "&.Mui-focused fieldset": {
                       borderColor: "transparent",
